@@ -89,6 +89,16 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
 }
 
+.music-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
 /* Category Navigation */
 .category-nav {
     display: flex;

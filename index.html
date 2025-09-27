@@ -17,12 +17,7 @@
                 <button id="musicToggle" class="music-btn">
                     <i class="fas fa-music"></i>
                 </button>
-                <select id="musicSelect" class="music-select">
-                    <option value="">选择背景音乐</option>
-                    <option value="music1">轻音乐 1</option>
-                    <option value="music2">轻音乐 2</option>
-                    <option value="music3">轻音乐 3</option>
-                </select>
+                <span class="music-label">莫扎特奏鸣曲 K448</span>
             </div>
         </header>
 
@@ -94,6 +89,8 @@
         <!-- Background music will be added here -->
     </audio>
 
+    <!-- Load menu data first, then main script -->
+    <script src="menu-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
