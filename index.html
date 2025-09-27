@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美味菜单 - 早餐与正餐</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">🍽️ 美味菜单</h1>
+            <div class="music-controls">
+                <button id="musicToggle" class="music-btn">
+                    <i class="fas fa-music"></i>
+                </button>
+                <select id="musicSelect" class="music-select">
+                    <option value="">选择背景音乐</option>
+                    <option value="music1">轻音乐 1</option>
+                    <option value="music2">轻音乐 2</option>
+                    <option value="music3">轻音乐 3</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Category Tabs -->
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="breakfast">早餐</button>
+            <button class="category-btn" data-category="lunch">正餐</button>
+        </nav>
+
+        <!-- Menu Grid -->
+        <main class="menu-container">
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be populated by JavaScript -->
+            </div>
+        </main>
+
+        <!-- Modal for dish details -->
+        <div id="dishModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <div class="dish-image-container">
+                        <img id="modalDishImage" src="" alt="">
+                    </div>
+                    <div class="dish-details">
+                        <h2 id="modalDishName"></h2>
+                        <div class="ingredients-section">
+                            <h3>所需材料</h3>
+                            <ul id="modalIngredients"></ul>
+                        </div>
+                        <div class="steps-section">
+                            <h3>制作步骤</h3>
+                            <ol id="modalSteps"></ol>
+                        </div>
+                        <div class="order-section">
+                            <button id="orderBtn" class="order-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                我要订购
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Confirmation Modal -->
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <h2>确认订购</h2>
+                    <p>您确定要订购 <span id="confirmDishName"></span> 吗？</p>
+                    <div class="contact-options">
+                        <button id="wechatOrder" class="contact-btn wechat-btn">
+                            <i class="fab fa-weixin"></i>
+                            发送到微信
+                        </button>
+                        <button id="smsOrder" class="contact-btn sms-btn">
+                            <i class="fas fa-sms"></i>
+                            发送短信
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <!-- Background music will be added here -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
